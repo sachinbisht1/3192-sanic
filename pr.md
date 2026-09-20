@@ -96,7 +96,7 @@ The work is prepared on branch `fix/request-form-return-type` in the contributor
 https://github.com/sachinbisht1/3192-sanic.git
 ```
 
-The branch still needs to be committed and pushed before opening the pull request. The pull request target should be:
+The branch has been committed as `623dc716` and pushed to the fork. The pull request target is:
 
 ```text
 sachinbisht1/3192-sanic:fix/request-form-return-type
