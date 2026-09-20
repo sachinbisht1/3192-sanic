@@ -1,0 +1,1 @@
+Correct the return type annotations for ``Request.form`` and ``Request.get_form``.

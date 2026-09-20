@@ -1025,6 +1025,7 @@ def test_post_form_urlencoded(app):
         "/", data=payload, headers=headers
     )
 
+    assert isinstance(request.form, RequestParameters)
     assert request.form.get("test") == "OK"
     assert request.form.get("test") == "OK"  # For request.parsed_form
 
@@ -2045,6 +2046,7 @@ def test_request_form_invalid_content_type(app):
 
     request, response = app.test_client.post("/", json={"test": "OK"})
 
+    assert isinstance(request.form, RequestParameters)
     assert request.form == {}
 
 
