@@ -681,8 +681,7 @@ class Request(Generic[sanic_type, ctx_type]):
         if self.parsed_form is None:
             self.get_form()
 
-        assert self.parsed_form is not None
-        return self.parsed_form
+        return cast(RequestParameters, self.parsed_form)
 
     @property
     def files(self) -> RequestParameters | None:

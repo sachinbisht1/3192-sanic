@@ -20,8 +20,9 @@ user_project_id = int(request.form.get("user_project_pk"))
 
 - Changed `Request.get_form()` to return `RequestParameters`.
 - Changed the `Request.form` property to return `RequestParameters`.
-- Added an explicit narrowing assertion after lazy parsing so the implementation
-        also satisfies the non-optional public return type.
+- Added an explicit type cast after lazy parsing so the implementation also
+        satisfies the non-optional public return type without introducing a runtime
+        assertion.
 - Updated the corresponding docstrings.
 - Added runtime assertions to the existing populated and empty-form tests.
 - Added a changelog entry for issue #3192.
