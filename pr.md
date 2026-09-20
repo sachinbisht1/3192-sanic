@@ -20,6 +20,8 @@ user_project_id = int(request.form.get("user_project_pk"))
 
 - Changed `Request.get_form()` to return `RequestParameters`.
 - Changed the `Request.form` property to return `RequestParameters`.
+- Added an explicit narrowing assertion after lazy parsing so the implementation
+        also satisfies the non-optional public return type.
 - Updated the corresponding docstrings.
 - Added runtime assertions to the existing populated and empty-form tests.
 - Added a changelog entry for issue #3192.
@@ -96,7 +98,7 @@ The work is prepared on branch `fix/request-form-return-type` in the contributor
 https://github.com/sachinbisht1/3192-sanic.git
 ```
 
-The branch has been committed as `623dc716` and pushed to the fork. The pull request target is:
+The branch was initially committed as `623dc716` and pushed to the fork. The follow-up correction is being committed on the same branch. The pull request target is:
 
 ```text
 sachinbisht1/3192-sanic:fix/request-form-return-type
